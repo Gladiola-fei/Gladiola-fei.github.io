@@ -181,6 +181,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Js之break和continue的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/14/Js%E4%B9%8Bbreak%E5%92%8Ccontinue%E7%9A%84%E5%8C%BA%E5%88%AB/">Js之break和continue的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/14/Js%E4%B9%8Bbreak%E5%92%8Ccontinue%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2020-07-14T14:36:27.785Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> Js之break和continue的区别<br>@<a href="目录">TOC</a></p>
+<h1 id="1-例题分析"><a href="#1-例题分析" class="headerlink" title="1.例题分析"></a>1.例题分析</h1><p>话不多说，先看一道例题：</p>
+<p>1.有下述JS代码： var i = 0; var sum = 0; do{ i++; if( i%2 === 0){ continue; } if( i%5=== 0){ break; } sum += i; }while( i&lt;10 ); console.log( ‘sum=’ + sum ); 其运行结果应该是下列哪项  （）<br>    A.sum = 0;<br>    B.sum = 4;<br>    C.sum = infinity;<br>    D.sum = 死循环；<br>【正确答案】B<br>    【答案解析】i=1  <code>i%2==0</code>条件为false，所以不运行continue，<code>i%5==0</code>条件为false，所以也不运行break，运行 <code>sum += i</code>; sum是1    <p>i=2&nbsp;<code>i%2==0</code>条件为true，所以运行continue，结束本次循环，继续下一次循环</p><p>i=3  &nbsp;<code>i%2==0</code>条件为false，所以不运行continue，<code>i%5==0</code>条件为false，所以也不运行break，运行 <code>sum += i</code>; sum是1+3</p><p>i=4 &nbsp; <code>i%2==0</code>条件为true，所以运行continue，结束本次循环，继续下一次循环</p><p>i=5 &nbsp;  <code>i%5==0</code>条件为true，所以运行break，循环结束，跳出循环体，执行循环体后面的语句</p></p>
+<h2 id="2-知识点"><a href="#2-知识点" class="headerlink" title="2.知识点"></a>2.知识点</h2><p>continue和break的区别：<br><strong>&lt;1&gt; continue</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;只是终止本次循环，接着还执行下一次循环<br><strong>&lt;2&gt; break</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用于完全结束一个循环，跳出循环体执行循环后面的语句</p>
+<h3 id="3-代码演示"><a href="#3-代码演示" class="headerlink" title="3.代码演示"></a>3.代码演示</h3><p>代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>; </span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">do</span>&#123; </span><br><span class="line">    i++; </span><br><span class="line">    <span class="keyword">if</span>(i%<span class="number">2</span> === <span class="number">0</span>)&#123;</span><br><span class="line">    	<span class="keyword">continue</span>;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">if</span>(i%<span class="number">5</span>=== <span class="number">0</span>)&#123; </span><br><span class="line">    	<span class="keyword">break</span>; </span><br><span class="line">    &#125; </span><br><span class="line">    sum += i; </span><br><span class="line">&#125;<span class="keyword">while</span>( i&lt;<span class="number">10</span> );</span><br><span class="line"><span class="built_in">console</span>.log( <span class="string">'sum='</span> + sum );</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br><img src="https://img-blog.csdnimg.cn/20200603095049969.png" alt="在这里插入图片描述"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/14/Js%E4%B9%8Bbreak%E5%92%8Ccontinue%E7%9A%84%E5%8C%BA%E5%88%AB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-web前端学习笔记—— transform和transition" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

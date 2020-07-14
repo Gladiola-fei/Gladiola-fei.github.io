@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Gladiola-fei.github.io">
-  <title>Archives | 微你</title>
+  <title>web前端学习笔记—— transform和transition | 微你</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人技术博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="微你">
-<meta property="og:url" content="https://gladiola-fei.github.io/archives/index.html">
+  <meta name="description" content="Transform,transition实现变形的列表主要知识点1.transition    transition-property:规定设置过渡效果的css属性名称（默认为all）    transition-duration:规定完成过渡效果需要多少秒或者毫秒    transition-delay:定义过渡效果何时开始（延迟数值为正，提前数值为负）    transition-timing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web前端学习笔记—— transform和transition">
+<meta property="og:url" content="https://gladiola-fei.github.io/2020/07/14/web%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%20transform%E5%92%8Ctransition/index.html">
 <meta property="og:site_name" content="微你">
-<meta property="og:description" content="个人技术博客">
+<meta property="og:description" content="Transform,transition实现变形的列表主要知识点1.transition    transition-property:规定设置过渡效果的css属性名称（默认为all）    transition-duration:规定完成过渡效果需要多少秒或者毫秒    transition-delay:定义过渡效果何时开始（延迟数值为正，提前数值为负）    transition-timing">
 <meta property="og:locale" content="zh_CH">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200201202001605.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjQ2MzQz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200201203110682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjQ2MzQz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200201202118802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjQ2MzQz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200201202350105.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjQ2MzQz,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-07-14T14:31:59.667Z">
+<meta property="article:modified_time" content="2020-07-14T14:31:13.455Z">
 <meta property="article:author" content="微你">
 <meta property="article:tag" content="前端博客， html5">
 <meta property="article:tag" content=" css3">
@@ -22,6 +28,7 @@
 <meta property="article:tag" content=" vue">
 <meta property="article:tag" content=" jquery">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200201202001605.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjQ2MzQz,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="微你" type="application/atom+xml">
   
@@ -179,103 +186,203 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-web前端学习笔记—— transform和transition" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      web前端学习笔记—— transform和transition
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/14/web%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%20transform%E5%92%8Ctransition/" class="archive-article-date">
+
+        
+        <a href="/2020/07/14/web%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%20transform%E5%92%8Ctransition/" class="archive-article-date">
   	<time datetime="2020-07-14T14:31:59.667Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/14/web%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%20transform%E5%92%8Ctransition/">web前端学习笔记—— transform和transition</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Transform-transition实现变形的列表"><a href="#Transform-transition实现变形的列表" class="headerlink" title="Transform,transition实现变形的列表"></a>Transform,transition实现变形的列表</h1><h2 id="主要知识点"><a href="#主要知识点" class="headerlink" title="主要知识点"></a>主要知识点</h2><p><strong><em>1.transition</em></strong><br>    transition-property:规定设置过渡效果的css属性名称（默认为all）<br>    transition-duration:规定完成过渡效果需要多少秒或者毫秒<br>    transition-delay:定义过渡效果何时开始（延迟数值为正，提前数值为负）<br>    transition-timing-function:规定速度效果的速度曲线（默认为ease)<br>    复合写法：transition:1s 2s linear;(表示持续1s,延迟2s执行，速度效果为linear)<br> <strong><em>2.transform</em></strong><br>    <strong>translate</strong>:位移</p>
+<ul>
+<li><p>translateX(x)：定义位移转换，只是用x轴的值</p>
+</li>
+<li><p>translateY(y)：定义位移转换，只是用y轴的值</p>
+</li>
+<li><p>translateZ(z):：定义3d位移转换，只是用z轴的值<br>复合写法：transform：translate（100px,50px);</p>
+<p><strong>scale</strong>:缩放（该值为一个比例值，以当前元素中心点进行缩放。正   常大小为1，放大一倍值为2，缩小一倍值为0.5）</p>
+</li>
+<li><p>scaleX(x)：通过设置x轴的值来定义缩放转换</p>
+</li>
+<li><p>scaleY(y)：通过设置y轴的值来定义缩放转换</p>
+</li>
+<li><p>scaleZ(z)：通过设置z轴的值来定义3d缩放转换<br>复合写法：transform:scale(2，2）或  transform:scale(2);</p>
+<p><strong>rotate</strong>:旋转(单位为角度deg，正值表示顺时针旋转，负值表示逆时针旋转)</p>
+</li>
+<li><p>rotateX(angle)：定义沿x轴的3d旋转</p>
+</li>
+<li><p>rotateY(angle)：定义沿y轴的3d旋转</p>
+</li>
+<li><p>rotateZ(angle)：定义沿z轴的3d旋转<br>复合写法：transform:rotate(-90deg);</p>
+</li>
+</ul>
+<p><strong>skew</strong>:斜切（单位也是角度，正值向左倾斜，负值向右倾斜）</p>
+<ul>
+<li>skewX(angle)：定义沿x轴的2d倾斜转换</li>
+<li>skewY(angle)：定义沿y轴的2d倾斜转换<br>复合写法：transform:skew(30deg);</li>
+</ul>
+<p><strong><em>3.transform复合写法与注意点</em></strong><br>    transform复合写法： transform:translate(50px,50px) rotate(70deg);<br>    transform注意点：</p>
+<ul>
+<li>变形操作不会影响到其它元素；</li>
+<li>变形操作只能添加给块元素，但是不能添加给内联元素；</li>
+<li>复合写法，可以同时添加多个变形操作（执行是有顺序的，即先执行后面的操作，再执行前面的操作，translate会受到rotate,scale,skew的影响    ）</li>
+</ul>
+<p><strong><em>4.transform-origin</em></strong><br>   transform旋转默认绕着中心点旋转<br>     写法：transform-origin:100px 100px; 或 transform-origin:center top;</p>
+<h2 id="案例：简单的变形列表"><a href="#案例：简单的变形列表" class="headerlink" title="案例：简单的变形列表"></a>案例：简单的变形列表</h2><p>当鼠标移动到 li 文字上时，实现动画展示， 一共两个文件，变形的列表.css 文件和 变形的列表.html 文件</p>
+<ol>
+<li>变形的列表.css</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">*&#123;<span class="attribute">margin</span>: <span class="number">0</span>;<span class="attribute">padding</span>: <span class="number">0</span>;&#125;</span><br><span class="line"> <span class="selector-class">.list</span>&#123;<span class="attribute">list-style</span>: none;<span class="attribute">width</span>:<span class="number">250px</span>;<span class="attribute">margin</span>: <span class="number">30px</span> auto;&#125;</span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-tag">li</span>&#123;<span class="attribute">height</span>:<span class="number">97px</span>;<span class="attribute">border-bottom</span>: <span class="number">1px</span> pink dashed;<span class="attribute">margin-top</span>: <span class="number">20px</span>;&#125;</span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-tag">li</span><span class="selector-pseudo">:last-child</span>&#123;<span class="attribute">border-bottom</span>: none;&#125; </span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-tag">img</span>&#123;<span class="attribute">display</span>:block;<span class="attribute">width</span>:<span class="number">112px</span>;<span class="attribute">height</span>: <span class="number">77px</span>;&#125;</span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-class">.list_photo</span>&#123;<span class="attribute">float</span>:left;<span class="attribute">width</span>:<span class="number">112px</span>;<span class="attribute">height</span>:<span class="number">77px</span>;<span class="attribute">position</span>:relative;<span class="attribute">overflow</span>: hidden;&#125;</span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-class">.list_photo</span> <span class="selector-class">.list_photo_box</span>&#123;<span class="attribute">border</span>:<span class="number">2px</span> white solid;<span class="attribute">width</span>:<span class="number">92px</span>;<span class="attribute">height</span>:<span class="number">57px</span>;<span class="attribute">position</span>: absolute;<span class="attribute">top</span>: <span class="number">9px</span>;<span class="attribute">left</span>: <span class="number">9px</span>;<span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0px</span>,-<span class="number">90px</span>) <span class="built_in">rotate</span>(-<span class="number">90deg</span>);<span class="attribute">transform-origin</span>: <span class="number">0</span>,<span class="number">0</span>;<span class="attribute">transition</span>: <span class="number">1s</span> <span class="number">20ms</span> linear;&#125;</span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-class">.list_photo</span> <span class="selector-class">.list_photo_text</span>&#123;<span class="attribute">width</span>: <span class="number">100%</span>;<span class="attribute">text-align</span>:center;<span class="attribute">position</span>:absolute;<span class="attribute">bottom</span>:<span class="number">25px</span>;<span class="attribute">color</span>:white;<span class="attribute">transition</span>: <span class="number">1s</span> <span class="number">20ms</span> linear;<span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0px</span>,<span class="number">100px</span>)&#125;</span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-class">.list_text</span>&#123;<span class="attribute">float</span>:left;<span class="attribute">width</span>: <span class="number">114px</span>;<span class="attribute">height</span>:auto;<span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">5px</span>;<span class="attribute">font-size</span>: <span class="number">12px</span>;<span class="attribute">line-height</span>: <span class="number">21px</span>;&#125;</span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-class">.list_text</span> <span class="selector-tag">a</span>&#123;<span class="attribute">text-decoration</span>:none;<span class="attribute">color</span>:black&#125;</span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.list_photo_box</span>&#123;<span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span>,<span class="number">0</span>) <span class="built_in">rotate</span>(<span class="number">0deg</span>);&#125;</span><br><span class="line"> <span class="selector-class">.list</span> <span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.list_photo_text</span>&#123;<span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span>,<span class="number">0</span>);&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<ol start="2">
+<li>变形的列表.html</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>变形的列表<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./变形的列表.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_photo"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./image/终南山院士.png"</span> <span class="attr">alt</span>=<span class="string">"终南山院士"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_photo_box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_photo_text"</span>&gt;</span>终南山院士<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_text"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"*"</span>&gt;</span>钟南山院士,福建省厦门市人,1936年10月出生,中国工程院院士<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_photo"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./image/新型冠状病毒.jpg"</span> <span class="attr">alt</span>=<span class="string">"新型冠状病毒"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_photo_box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_photo_text"</span>&gt;</span>冠状病毒<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_text"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"*"</span>&gt;</span>主要感染特征为：起初发热，干咳，具备人传人的能力<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_photo"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./image/正确佩戴口罩.jpg"</span> <span class="attr">alt</span>=<span class="string">"正确佩戴口罩"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_photo_box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_photo_text"</span>&gt;</span>佩戴口罩<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list_text"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"*"</span>&gt;</span>用双手紧压鼻梁两侧的金属条，使口罩上端紧贴鼻梁，向下拉伸口罩<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">     </span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>演示结果：（这里本来想插入一个演示视频或者可以直接进行代码演示的网页，但是由于知识储备和经验不足，只能插入几张图来说明,欢迎大家指导交流）<br><img src="https://img-blog.csdnimg.cn/20200201202001605.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjQ2MzQz,size_16,color_FFFFFF,t_70" alt="[这张图为初始图，hover之前的图]"><br><img src="https://img-blog.csdnimg.cn/20200201203110682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjQ2MzQz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200201202118802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjQ2MzQz,size_16,color_FFFFFF,t_70" alt="当鼠标移动到li上时，执行动画"><br><img src="https://img-blog.csdnimg.cn/20200201202350105.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjQ2MzQz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>   <strong><em>欢迎大家指导交流</em></strong></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://gladiola-fei.github.io/2020/07/14/web%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%20transform%E5%92%8Ctransition/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-07-12T14:16:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一个博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">我的第一个博客</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/08/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-08T02:22:56.057Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/08/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -298,8 +405,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
